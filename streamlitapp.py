@@ -15,7 +15,7 @@ def age_column(x : pd.DataFrame):
     return x
 
 
-path = os.path.join('/Users/mohamedatef/Desktop/model/' , 'rff.h5')
+path = '/Users/mohamedatef/Desktop/model/rff.h5'
 Model = joblib.load(path)
 
 

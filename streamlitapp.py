@@ -15,8 +15,8 @@ def age_column(x : pd.DataFrame):
     return x
 
 
-path = os.getcwd()
-Model = joblib.load(path + 'Desktop/model/rff.h5')
+path = os.listdir()
+Model = joblib.load(path)
 
 
 

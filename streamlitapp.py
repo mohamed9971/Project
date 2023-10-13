@@ -1,29 +1,25 @@
 import streamlit as st
 import joblib
-import os
 import pandas as pd
 import numpy as np
-import pickle
 
 
 
-#def drop_first_column(x : pd.DataFrame):
-#    return x[x.columns[1:]]
+
+
 
 def age_column(x : pd.DataFrame):
     x['Car_Age'] = 2023 - x['Year']
     x.drop('Year',axis=1 , inplace=True)
     return x
 
-os.chdir('/Users/mohamedatef/Desktop/model/')
-
-Model = joblib.load('rff.h5')
 
 
+Model = joblib.load('/Users/mohamedatef/Desktop/model/rff.h5')
 
-#df = pd.read_csv('Cars.csv')
 
-#print(df)
+
+
 
 
 

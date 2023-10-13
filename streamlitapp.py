@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import os
 
 
 
@@ -14,8 +15,8 @@ def age_column(x : pd.DataFrame):
     return x
 
 
-
-Model = joblib.load('/Users/mohamedatef/Desktop/model/rff.h5')
+path = os.path.join('/Users/mohamedatef/Desktop/model/' , 'rff.h5')
+Model = joblib.load(path)
 
 
 
